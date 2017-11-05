@@ -28,4 +28,4 @@
 
 ## Screenshot
 
-![alt text](https://github.com/tettusud/angular-electron/screenshots/app.jpg)
+![Application Screenshot](https://github.com/tettusud/angular-electron/blob/master/screenshots/app.jpg)
