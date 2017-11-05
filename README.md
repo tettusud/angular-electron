@@ -16,12 +16,8 @@
   ```
 
 ## Distribute
-  Install electron-forge globally once.
-  ```
-    npm install -g electron-forge
-   
-  ```   
-  After succesful installation, run the below command to generate your app
+    
+  After succesful build, run the below command to generate your app
   ```
     npm run package
   ```
