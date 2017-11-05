@@ -1,4 +1,35 @@
 body {
-    background: #0147A7;
-    color: #fff;
-}
+    min-height: 100vh;    
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.0em;
+    background-color:#efefef;
+  }
+ 
+  .page{
+    color:#333;
+  }
+
+  .aligner {
+    display: flex;
+    align-items: center;
+    min-height: 24em;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .aligner-item {
+    flex: 1;     
+  }
+  
+  .aligner-item--top {
+    align-self: flex-start;
+  }
+  
+  .aligner-item--bottom {
+    align-self: flex-end;
+  }
+  
+  .aligner-item--fixed {
+    flex: none;
+    max-width: 50%;
+  }

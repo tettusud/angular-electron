@@ -12,7 +12,12 @@ module.exports = function (options) {
     },
 
     resolve: {
-      extensions: ['.ts', '.js']
+      extensions: ['.ts', '.js'],
+      alias: {
+        materializecss: 'materialize-css/dist/css/materialize.css',
+        materialize: 'materialize-css/dist/js/materialize.js'       ,
+        fontawesomecss: 'font-awesome/css/font-awesome.css',
+      }
     },
 
     module: {
@@ -35,15 +40,26 @@ module.exports = function (options) {
           loader: 'file-loader?name=assets/[name].[hash].[ext]'
         },
         {
-          test: /\.css$/,
+          test: /materialize-css\/dist\/js\/materialize\.js/,
+          loader: 'imports?materializecss'
+        },
+        { test: /materialize\.css$/, loader: 'style-loader!css-loader' },
+        
+        {
+          test: /^((?!materialize).)*\.css$/,
           exclude: helpers.root('src', 'app'),
           loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader?sourceMap' })
         },
         {
-          test: /\.css$/,
+          test: /^((?!materialize).)*\.css$/,
           include: helpers.root('src', 'app'),
           loader: 'raw-loader'
-        }
+        },
+        //{ test: /^((?!materialize).)*\.css$/, loaders: ['to-string-loader', 'css-loader'] },
+        {
+          test: /chart.js\/src\/chart\.js/,
+          loader: 'imports?chartjs'
+        }       
       ]
     },
 
@@ -62,8 +78,10 @@ module.exports = function (options) {
 
       new HtmlWebpackPlugin({
         template: 'src/index.ejs',
-        baseUrl: options.ENV == 'production'?'':'/'
+        baseUrl: options.ENV == 'production' ? '' : '/'
       })
     ]
   }
 };
+
+
