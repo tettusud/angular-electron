@@ -25,3 +25,7 @@
   ```
     npm run package
   ```
+
+## Screenshot
+
+![alt text](https://github.com/tettusud/angular-electron/screenshots/app.jpg)
