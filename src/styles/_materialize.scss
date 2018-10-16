@@ -1,0 +1,13 @@
+// materializecss imports
+ 
+.full-width-btn{   
+   box-sizing: border-box;
+   margin:auto;
+   width: 94%;
+}
+ 
+@media (max-width: 839px){
+    .full-width-btn{       
+        width: 100%;
+     } 
+}

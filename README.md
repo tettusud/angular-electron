@@ -23,5 +23,7 @@
   ```
 
 ## Screenshot
-
-![Application Screenshot](https://github.com/tettusud/angular-electron/blob/master/screenshots/app.jpg)
+### Home screen
+![Application Screenshot](./docs/img/1.jpg)
+### Login screen
+![Application Screenshot](./docs/img/2.jpg)

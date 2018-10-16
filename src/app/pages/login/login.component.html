@@ -1,0 +1,23 @@
+<div class="outline">
+  <div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell--span-12">
+        <div mdcTextField outlined="true">
+          <i mdcTextFieldIcon class="material-icons">email</i>
+          <input mdcTextFieldInput type="text" />
+          <label mdcFloatingLabel>Email</label>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell--span-12">
+        <div mdcTextField outlined="true">
+          <i mdcTextFieldIcon class="material-icons">lock</i>
+          <input mdcTextFieldInput type="password" />
+          <label mdcFloatingLabel>Password</label>
+        </div>
+      </div>
+      <div class="mdc-layout-grid__cell--span-12">
+        <a mdcButton class="full-width-btn" unelevated="true" (click)="authenticate()">Login</a>
+      </div>
+    </div>
+  </div>
+</div>

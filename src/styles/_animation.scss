@@ -1,0 +1,82 @@
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+$bounce-height: -250;
+
+@function bounce($var) {
+  $curr_height: $bounce-height* $var;
+  @return #{$curr_height}px;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(bounce(1));
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(bounce(1));
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+
+@-webkit-keyframes swing {
+
+  20%,
+  50%,
+  100% {
+    -webkit-transform-origin: center bottom;
+  }
+
+  20% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(15deg);
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.swing {
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+ }

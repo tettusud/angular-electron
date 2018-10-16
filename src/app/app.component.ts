@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-
+import 'materialize-css/dist/js/materialize.min.js';
+declare const M;
+  
 @Component({
-  selector: 'my-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  routeNames = ["android","ios"];  
+   
 }

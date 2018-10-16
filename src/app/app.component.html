@@ -1,17 +1,12 @@
-<main materialize >
-  <nav class="uppercase" role="navigation" style="-webkit-app-region: drag">
-    <ul id="slide-out" class="side-nav">
-      <li *ngFor="let routeName of routeNames" routerLinkActive="active">
-        <a [routerLink]="[routeName]">{{routeName}}</a>
-      </li>
-    </ul>
-    <a materialize="sideNav" [materializeParams]="[{edge:'left',closeOnClick:true}]" href="#" data-activates="slide-out" class="button-collapse show-on-large webkit-not-draggable draggable left">
-      <i class="fa fa-bars"></i>
-    </a>
-  </nav>
+<!--The content below is only a placeholder and can be replaced.-->
 
-  <div>
-    <router-outlet></router-outlet>
-  </div>
-
-</main>
+<div>
+  <header>
+    <app-header></app-header>
+  </header>
+  <main class="mdc-top-app-bar--fixed-adjust">
+    <div class="page">     
+        <router-outlet></router-outlet>         
+    </div>
+  </main>
+</div>

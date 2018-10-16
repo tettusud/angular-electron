@@ -1,29 +1,27 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { RouterModule} from '@angular/router';
-import {MaterializeDirective} from "angular2-materialize";
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+import { ComponentsModule} from './components/components.module';
+import { PagesModule} from './pages/pages.module';
+import { MaterialModule } from '@blox/material';
+
 import { AppComponent } from './app.component';
 
-import {rootRouterConfig} from './app.routes';
 
-import {AndroidHomeComponent} from './pages/android/android.component';
-import {IosHomeComponent} from './pages/ios/ios.component';
 
 @NgModule({
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    RouterModule.forRoot(rootRouterConfig)    
+    ComponentsModule,
+    PagesModule,
+    MaterialModule,
+    RouterModule.forRoot([])
   ],
-  declarations: [
-    AppComponent,
-    MaterializeDirective,
-    AndroidHomeComponent,
-    IosHomeComponent
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
- 

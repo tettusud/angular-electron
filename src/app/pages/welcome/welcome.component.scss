@@ -1,0 +1,15 @@
+@import 'src/styles/variables';
+.welcome{
+   
+    text-align: center;
+    .title{
+        font-size: 3rem;
+        font-weight: bold;
+        color: $primary-color;
+        font-family: 'Mali', cursive;
+    }
+    .login{
+        margin-top:20px;
+        font-size: 1.2rem;
+    }
+}
